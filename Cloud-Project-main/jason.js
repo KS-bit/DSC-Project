@@ -1,5 +1,21 @@
 const auth = firebase.auth();
 
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    document.getElementById("ddropdown").style.display="block";
+    document.getElementById("login").style.display="none";
+    var user = firebase.auth().currentUser;
+    if (user != null) {
+     var email_id=user.email;
+document.getElementById("showId").innerHTML="welcome: "+email_id
+    }
+    // User is signed in.
+  } else {
+    document.getElementById("ddropdown").style.display="none";
+    document.getElementById("login").style.display="block";
+    // No user is signed in.
+  }
+});
 
 function login(){
   var userEmail = document.getElementById("user_name").value
@@ -52,3 +68,11 @@ function register(){
    console.error("Error adding document: ", error);
 });
    }
+
+   function logout(){
+    firebase.auth().signOut().then(() => {
+  // Sign-out successful.
+  }).catch((error) => {
+  // An error happened.
+  });
+  }
