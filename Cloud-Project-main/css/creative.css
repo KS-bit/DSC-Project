@@ -8,16 +8,17 @@ html,
 body {
     width: 100%;
     height: 100%;
+    
 }
 
 body {
     font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
-    background-color: rgb(255, 255, 255);
+    background-color: #ddd; 
 }
 
 hr {
     max-width: 50px;
-    border-color: #f05f40;
+    border-color: #f53004;
     border-width: 3px;
 }
 
@@ -30,6 +31,11 @@ a {
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
+}
+
+#showId{
+ color: black;
+ font-size: 11px;   
 }
 
 a:hover,
@@ -45,6 +51,33 @@ h5,
 h6 {
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
 }
+
+marquee {
+    padding-top: 50px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 100px ;
+    grid-gap: 10px;
+    color: #444;
+    margin: 0 auto;
+    padding-left: 100px;
+    opacity: 70%;
+  }
+  
+  .box {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    text-align: center;
+    
+  }
+
+
 
 p {
     margin-bottom: 20px;
@@ -73,6 +106,8 @@ aside {
     padding: 50px 0;
 }
 
+
+
 .no-padding {
     padding: 0;
 }
@@ -85,7 +120,9 @@ aside {
     -moz-transition: all .35s;
     transition: all .35s;
 }
-
+.navbar-default:hover{
+    color: skyblue;
+}
 .navbar-default .navbar-header .navbar-brand {
     text-transform: uppercase;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
@@ -189,6 +226,13 @@ header {
     -o-background-size: cover;
 }
 
+.about{
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    margin-top: 100px;
+    font-weight: bolder;
+}
 header .header-content {
     position: relative;
     width: 100%;
@@ -241,6 +285,10 @@ header .header-content .header-content-inner p {
         max-width: 80%;
         font-size: 18px;
     }
+}
+
+.page-scroll:hover{
+    color: skyblue;
 }
 
 .section-heading {
@@ -632,8 +680,27 @@ body {
       margin-left: calc(-728px * 3);
     }
   }
+  
+  .Core{
+      background-color: black;
+      opacity: 60%;
+      color: white;
+      padding: 10px 20px;
+      margin-bottom: 10px;
+      width: 60%;
+      border-radius: 0 30px 0 30px;
+      
+  }
 
+  .Core:hover{
+      opacity: 90%;
+  }
 
+  .group{
+      margin-top: 200px;
+  }
+  
+  
   
   .dropbtn {
     background-color: rgb(36, 35, 35);
@@ -657,27 +724,34 @@ body {
   .dropdown {
     position: relative;
     display: inline-block;
+    width: fit-content;
   }
   
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
+    position: ;
+    background-color: skyblue;
+    width: 250px;
+    opacity: 80%;
+    
+  
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     text-transform: uppercase;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
+    font-size: 20px;
   }
   
   /* Links inside the dropdown */
   .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 10px 10px;
     text-decoration: none;
-    display: block;
+    display: list-item;
+    font-size: 20px;
+    width: fit-content;
   }
   
   /* Change color of dropdown links on hover */
